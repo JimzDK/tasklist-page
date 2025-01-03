@@ -1,0 +1,116 @@
+:root {
+    --lightblue: #b8d6e0;
+    --darkblue: #50899e;
+}
+
+* {
+    margin: 0;
+    font-family: 'handlee', sans-serif;
+}
+
+body {
+    background-color: var(--lightblue);
+}
+
+.container {
+    background-color: white;
+    border-color: wheat;
+    border-style: solid;
+    border-width: 30px;
+    width: 50%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 25px 50px;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.header button {
+    border: none;
+    color: black;
+    background-color: var(--lightblue);
+    border-radius: 2px;
+    width: 110px;
+    min-height: 30px;
+    max-height: fit-content;
+    font-weight: bold;
+}
+
+.header button:hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+#searchField {
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.tasklist {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task {
+    display: flex;
+    gap: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--darkblue);
+    background-color: var(--lightblue);
+    align-items: center;
+}
+
+.task .textarea {
+    border: none;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    overflow: auto;
+    resize: none;
+}
+
+.task button {
+    background-color: transparent;
+    border: none;
+    color: var(--darkblue);
+    font-size: 20px;
+}
+
+.task button:hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.task label:hover {
+    cursor: text;
+}
+
+.task input[type='checkbox'] {
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        border-radius: 0;
+        border: none;
+        height: 100%;
+        width: 100%;
+    }
+}
